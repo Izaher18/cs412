@@ -1,0 +1,10 @@
+{% extends "quotes/base.html" %}
+
+{% block content %}
+  <section class="quote-card">
+    <img class="quote-image" src="{{ image_url }}" alt="Maya Angelou" />
+    <blockquote class="quote-text">
+      "{{ quote }}"
+    </blockquote>
+  </section>
+{% endblock %}

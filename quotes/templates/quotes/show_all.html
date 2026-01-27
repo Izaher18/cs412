@@ -1,0 +1,21 @@
+{% extends "quotes/base.html" %}
+
+{% block content %}
+  <section>
+    <h2>All Quotes</h2>
+    <ul class="quote-list">
+      {% for quote in quotes %}
+        <li>"{{ quote }}"</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>All Images</h2>
+    <div class="image-grid">
+      {% for image_url in images %}
+        <img class="quote-image" src="{{ image_url }}" alt="Maya Angelou" />
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

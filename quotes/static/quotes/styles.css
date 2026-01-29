@@ -1,52 +1,104 @@
+/* Base styling for the entire page - dark background with serif font for a powerful, classic look */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Georgia', 'Times New Roman', serif;
   margin: 0;
-  background: #f7f7f7;
-  color: #222;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #f0f0f0;
+  min-height: 100vh;
 }
 
+/* Header with black gradient and crimson red accent - representing Malcolm X's powerful presence */
 .site-header {
-  background: #2c3e50;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
   color: #fff;
-  padding: 24px 16px;
+  padding: 32px 16px;
   text-align: center;
+  border-bottom: 4px solid #dc143c;
+  box-shadow: 0 4px 12px rgba(220, 20, 60, 0.3);
+}
+
+/* Bold title with uppercase styling and red shadow effect */
+.site-header h1 {
+  margin: 0 0 16px 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(220, 20, 60, 0.5);
 }
 
 .site-nav {
-  margin-top: 12px;
+  margin-top: 16px;
 }
 
+/* Navigation links with bold uppercase styling */
 .site-nav a {
   color: #fff;
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect turns links red with border highlight */
+.site-nav a:hover {
+  color: #dc143c;
+  border-color: #dc143c;
+  background: rgba(220, 20, 60, 0.1);
 }
 
 .content {
-  max-width: 900px;
-  margin: 24px auto;
+  max-width: 1000px;
+  margin: 40px auto;
   padding: 0 16px;
 }
 
+/* Card container for individual quotes - dark background with red border */
 .quote-card {
-  background: #fff;
-  border-radius: 8px;
-  padding: 24px;
+  background: linear-gradient(145deg, #222 0%, #1a1a1a 100%);
+  border-radius: 12px;
+  padding: 40px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border: 2px solid #dc143c;
+  position: relative;
+  overflow: hidden;
 }
 
-.quote-image {
-  max-width: 300px;
+/* Decorative top stripe using Pan-African colors (red, white, green) */
+.quote-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  border-radius: 6px;
-  display: block;
-  margin: 0 auto 16px;
+  height: 4px;
+  background: linear-gradient(90deg, #dc143c 0%, #fff 50%, #006400 100%);
 }
 
+/* Images with red border and shadow for emphasis */
+.quote-image {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 24px;
+  border: 3px solid #dc143c;
+  box-shadow: 0 4px 16px rgba(220, 20, 60, 0.3);
+}
+
+/* Quote text styling - large, italic, with good line spacing for readability */
 .quote-text {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-style: italic;
+  line-height: 1.8;
+  color: #f0f0f0;
+  font-weight: 500;
+  position: relative;
+  padding: 20px;
 }
 
 .quote-list {
@@ -54,23 +106,75 @@ body {
   padding: 0;
 }
 
+/* Individual quote items in the list with left red accent bar */
 .quote-list li {
-  background: #fff;
-  margin: 10px 0;
-  padding: 12px 16px;
-  border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  background: linear-gradient(145deg, #1f1f1f 0%, #161616 100%);
+  margin: 16px 0;
+  padding: 20px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-left: 4px solid #dc143c;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  transition: transform 0.2s ease;
 }
 
+/* Hover effect slides list items to the right and adds red glow */
+.quote-list li:hover {
+  transform: translateX(8px);
+  box-shadow: 0 4px 16px rgba(220, 20, 60, 0.4);
+}
+
+/* Responsive grid layout for displaying multiple images */
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
 }
 
+.image-grid img {
+  transition: transform 0.3s ease;
+}
+
+/* Slight zoom effect on image hover */
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* About page container with dark background and red border */
 .about {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(145deg, #222 0%, #1a1a1a 100%);
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border: 2px solid #dc143c;
+  line-height: 1.8;
+}
+
+/* Section headings in about page - red with underline */
+.about h2 {
+  color: #dc143c;
+  border-bottom: 2px solid #dc143c;
+  padding-bottom: 12px;
+  margin-top: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about h2:first-child {
+  margin-top: 0;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+/* General heading styling throughout the site */
+h2 {
+  color: #dc143c;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
 }
